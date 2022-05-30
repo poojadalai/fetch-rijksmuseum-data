@@ -6,7 +6,7 @@ import { selectMuseumData } from "../store/museum/selectors";
 export default function Home() {
   const dispatch = useDispatch();
 
-  const posts = useSelector(selectMuseumData);
+  const links = useSelector(selectMuseumData);
 
   useEffect(() => {
     dispatch(fetchMuseumData);
@@ -14,9 +14,9 @@ export default function Home() {
 
   return (
     <div>
-      {
-        !posts.length ? "Loading" : posts.map((post) => <p key={post.id}>{post.title}</p>) //you can expand this
-      }
+      {!links.length
+        ? "Loading"
+        : links.map((link) => <p key={link.id}>{link.title}</p>)}
     </div>
   );
 }
