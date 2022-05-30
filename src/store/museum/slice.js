@@ -16,7 +16,7 @@ export const museumSlice = createSlice({
     },
     museumdataFetch: (state, action) => {
       console.log("dataFetched action", action);
-      state.museumData = [...action.payload]; // get our list of posts from the action payload
+      state.museumData = [...action.payload]; // get our list of arts from the action payload
       state.loading = false;
     },
   },
