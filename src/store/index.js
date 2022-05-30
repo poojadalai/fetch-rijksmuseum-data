@@ -3,7 +3,7 @@ import museumReducer from "./museum/slice";
 
 const store = configureStore({
   reducer: {
-    museumData: museumReducer,
+    museum: museumReducer,
   },
 });
 
